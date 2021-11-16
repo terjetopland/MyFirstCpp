@@ -1,0 +1,3 @@
+C:/Users/terje/source/repos/myFirstCPlussPluss/cmake-build-debug/CMakeFiles/myFirstCPlussPluss.dir
+C:/Users/terje/source/repos/myFirstCPlussPluss/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/terje/source/repos/myFirstCPlussPluss/cmake-build-debug/CMakeFiles/rebuild_cache.dir
