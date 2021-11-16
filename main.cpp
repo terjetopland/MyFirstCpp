@@ -4,6 +4,7 @@
 
 int main() {
     int temp, counter;
+    float median, counter2, fl_numbers;
     counter = 0;
     std::vector<int> the_numbers;
 
@@ -16,16 +17,18 @@ int main() {
         counter++;
     }
 
+    std::vector<int> sorted_numbers = the_numbers;
+    std::sort(sorted_numbers.begin(), sorted_numbers.end());
+
+
+
+    std::cout << "You entered " << counter << " numbers." << std::endl;
+
     std::cout << "The numbers you entered where: ";
     for (int i = 0; i < counter ; ++i) {
         std::cout << the_numbers[i] << " ";
     }
     std::cout << std::endl;
-
-    std::cout << "You entered " << counter << " numbers." << std::endl;
-
-    std::vector<int> sorted_numbers = the_numbers;
-    std::sort(sorted_numbers.begin(), sorted_numbers.end());
 
     std::cout << "Your numbers sorted is: ";
     for (int i = 0; i < counter; ++i) {
