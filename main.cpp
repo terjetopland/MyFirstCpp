@@ -2,25 +2,27 @@
 #include <vector>
 #include <algorithm>
 
+using namespace std;
+
+
 int main() {
     int temp, counter;
-    float median, counter2, fl_numbers;
+    float median, counter2, fl_numbers, first_half, second_half;
     counter = 0;
-    std::vector<int> the_numbers;
+    vector<int> the_numbers;
 
-    std::cout << "Hey there please enter any number of integers: " << std::endl;
+    cout << "Hey there please enter any number of integers: " << std::endl;
 
-    std::cin >> temp;
+   cin >> temp;
     while (temp != 0) {
         the_numbers.push_back(temp);
         std::cin >> temp;
         counter++;
     }
 
+
     std::vector<int> sorted_numbers = the_numbers;
     std::sort(sorted_numbers.begin(), sorted_numbers.end());
-
-
 
     std::cout << "You entered " << counter << " numbers." << std::endl;
 
@@ -41,6 +43,18 @@ int main() {
         std::cout << the_numbers[i] << " ";
     }
     std::cout << std::endl;
+
+    first_half = ((float)counter/2)-1;
+    second_half = (float)counter/2;
+    if(counter % 2 == 0) {
+        median = (sorted_numbers[first_half] + sorted_numbers[second_half]) /2;
+    }
+
+    if (counter % 2 == 1) {
+        median = sorted_numbers[second_half];
+    }
+
+    cout << "Median is: " << median << endl;
 
     return 0;
 }
