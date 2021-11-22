@@ -7,30 +7,25 @@ using namespace std;
 
 int main() {
     int temp, counter;
-    float median, counter2, fl_numbers, first_half, second_half;
+    float median, first_half, second_half;
     counter = 0;
     vector<int> the_numbers;
 
     cout << "Hey there please enter any number of integers: " << std::endl;
+    cout << "If you enter '0', the program will sum, sort, and find the median of the numbers." << endl;
 
-   cin >> temp;
+    cin >> temp;
     while (temp != 0) {
         the_numbers.push_back(temp);
         std::cin >> temp;
         counter++;
     }
 
-
+    //vector is used to make a dynamic "list". Vector takes longer time to read from than list.
     std::vector<int> sorted_numbers = the_numbers;
     std::sort(sorted_numbers.begin(), sorted_numbers.end());
 
     std::cout << "You entered " << counter << " numbers." << std::endl;
-
-    std::cout << "The numbers you entered where: ";
-    for (int i = 0; i < counter ; ++i) {
-        std::cout << the_numbers[i] << " ";
-    }
-    std::cout << std::endl;
 
     std::cout << "Your numbers sorted is: ";
     for (int i = 0; i < counter; ++i) {
